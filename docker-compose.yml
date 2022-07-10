@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  media_mysql:
+    image: mysql:latest
+    restart: always
+    container_name: media_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 123123
+      MYSQL_DATABASE: media
+    ports:
+      - 3306:3306
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - app-tier
+  media_api:
+    build:
+      context: ./media-scraper-api
+      dockerfile: Dockerfile
+    image: media_api
+    container_name: media_api
+    env_file:
+      - ./media-scraper-api/.env.example
+    ports:
+      - "4000:4000"
+    networks:
+      - app-tier
+    environment:
+      DB_HOST: media_mysql
+      DB_PORT: 3306
+    restart: always
+    depends_on:
+      - media_mysql
+  media_ui:
+    depends_on:
+      - media_api
+    build:
+      context: ./media-scraper-ui
+      dockerfile: Dockerfile
+    image: media_ui
+    container_name: media_ui
+    env_file:
+      - ./media-scraper-ui/.env.example
+    ports:
+      - "3000:3000"
+    networks:
+      - app-tier
+      
+volumes:
+  mysql-data:
+    driver: local
+networks:
+  app-tier:
+    driver: bridge

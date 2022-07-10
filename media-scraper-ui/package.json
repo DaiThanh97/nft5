@@ -1,0 +1,60 @@
+{
+  "name": "share-utube-client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
+    "@mui/icons-material": "^5.2.4",
+    "@mui/material": "^5.2.4",
+    "@mui/x-data-grid": "^5.2.0",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^12.6.3",
+    "add": "^2.0.6",
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
+    "formik": "^2.2.6",
+    "history": "4.10.0",
+    "jwt-decode": "^3.1.2",
+    "lodash": "^4.17.21",
+    "notistack": "^1.0.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-infinite-scroll-component": "^5.1.0",
+    "react-player": "^2.8.2",
+    "react-redux": "^7.2.2",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.2",
+    "redux": "^4.0.5",
+    "redux-saga": "^1.1.3",
+    "web-vitals": "^1.1.0",
+    "yup": "^0.32.8"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

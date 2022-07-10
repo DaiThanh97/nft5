@@ -1,0 +1,3 @@
+export const LOADING_LOGIN = 'LOADING_LOGIN';
+export const LOADING_SIGNUP = 'LOADING_SIGNUP';
+export const LOADING_SHARE = 'LOADING_SHARE';
